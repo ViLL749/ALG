@@ -1,0 +1,14 @@
+/Users/vill/Desktop/AlgNew/bin/Debug/net8.0/AlgNew
+/Users/vill/Desktop/AlgNew/bin/Debug/net8.0/AlgNew.deps.json
+/Users/vill/Desktop/AlgNew/bin/Debug/net8.0/AlgNew.runtimeconfig.json
+/Users/vill/Desktop/AlgNew/bin/Debug/net8.0/AlgNew.dll
+/Users/vill/Desktop/AlgNew/bin/Debug/net8.0/AlgNew.pdb
+/Users/vill/Desktop/AlgNew/obj/Debug/net8.0/AlgNew.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vill/Desktop/AlgNew/obj/Debug/net8.0/AlgNew.AssemblyInfoInputs.cache
+/Users/vill/Desktop/AlgNew/obj/Debug/net8.0/AlgNew.AssemblyInfo.cs
+/Users/vill/Desktop/AlgNew/obj/Debug/net8.0/AlgNew.csproj.CoreCompileInputs.cache
+/Users/vill/Desktop/AlgNew/obj/Debug/net8.0/AlgNew.dll
+/Users/vill/Desktop/AlgNew/obj/Debug/net8.0/refint/AlgNew.dll
+/Users/vill/Desktop/AlgNew/obj/Debug/net8.0/AlgNew.pdb
+/Users/vill/Desktop/AlgNew/obj/Debug/net8.0/AlgNew.genruntimeconfig.cache
+/Users/vill/Desktop/AlgNew/obj/Debug/net8.0/ref/AlgNew.dll
