@@ -42,13 +42,13 @@ namespace Project
 
             Shuffle(questions, options, correctAnswers); // Перемешиваем вопросы и ответы
 
-            int correctAnswersCount = TakeTest(questions, correctAnswers);
+            int correctAnswersCount = TakeTest(questions, options, correctAnswers);
 
             char grade = CalculateGrade(correctAnswersCount, questions.Length);
 
             PrintResults(correctAnswersCount, questions.Length, grade);
 
-            ShowMenu(correctAnswersCount, questions.Length, questions, correctAnswers);
+            ShowMenu(correctAnswersCount, questions.Length, questions, options, correctAnswers);
         }
 
         static void Shuffle(string[] questions, string[][] options, string[][] answers)
@@ -77,7 +77,7 @@ namespace Project
             }
         }
 
-        static int TakeTest(string[] questions, string[][] correctAnswers)
+        static int TakeTest(string[] questions, string[][] options, string[][] correctAnswers)
         {
             int correctAnswersCount = 0;
 
@@ -85,14 +85,15 @@ namespace Project
             {
                 string question = questions[i];
                 string[] correctAnswer = correctAnswers[i];
+                string[] questionOptions = options[i];
 
                 Console.WriteLine($"\nВопрос {i + 1}: {question}");
+                Console.WriteLine("Варианты ответов:");
+                Console.WriteLine(string.Join("\n", questionOptions)); // Вывод вариантов ответов
 
                 string[] userAnswers = GetUserAnswers();
 
                 userAnswersArray[i] = userAnswers; // Добавляем ответы пользователя в ступенчатый массив
-
-                Console.WriteLine($"Ваш ответ: {string.Join(", ", userAnswers)}");
 
                 if (AreAnswersCorrect(userAnswers, correctAnswer))
                 {
@@ -155,7 +156,7 @@ namespace Project
             Console.WriteLine("Спасибо за участие в тестировании!");
         }
 
-        static void ShowMenu(int correctAnswersCount, int totalQuestions, string[] questions, string[][] correctAnswers)
+        static void ShowMenu(int correctAnswersCount, int totalQuestions, string[] questions, string[][] options, string[][] correctAnswers)
         {
             Console.WriteLine("\nМеню:");
             Console.WriteLine("1. Выход");
@@ -174,16 +175,16 @@ namespace Project
                     Main(new string[] { }); // Перезапуск теста
                     break;
                 case "3":
-                    ShowTeacherResults(correctAnswersCount, totalQuestions, questions, correctAnswers); // Передаем результаты преподавателю
+                    ShowTeacherResults(correctAnswersCount, totalQuestions, questions, options, correctAnswers); // Режим преподавателя
                     break;
                 default:
                     Console.WriteLine("Некорректный выбор. Пожалуйста, выберите одно из предложенных действий.");
-                    ShowMenu(correctAnswersCount, totalQuestions, questions, correctAnswers);
+                    ShowMenu(correctAnswersCount, totalQuestions, questions, options, correctAnswers);
                     break;
             }
         }
 
-        static void ShowTeacherResults(int correctAnswersCount, int totalQuestions, string[] questions, string[][] correctAnswers)
+        static void ShowTeacherResults(int correctAnswersCount, int totalQuestions, string[] questions, string[][] options, string[][] correctAnswers)
         {
             Console.WriteLine("\nДля доступа к результатам для преподавателя требуется ввести пароль.");
 
@@ -198,19 +199,22 @@ namespace Project
             {
                 Console.WriteLine("\nДоступ разрешен. Результаты для преподавателя:");
 
-                // Выводим общее количество правильных ответов и общее количество вопросов
                 Console.WriteLine($"Вы ответили правильно на {correctAnswersCount}/{totalQuestions} вопросов.");
 
-                // Выводим дополнительную информацию, например, вопросы, в которых были допущены ошибки
                 Console.WriteLine("\nРасширенные результаты:");
 
                 for (int i = 0; i < questions.Length; i++)
                 {
-                    string question = questions[i];
+                    string question = questions[i]; // Получаем вопросы
                     string[] userAnswers = userAnswersArray[i]; // Получаем ответы пользователя
                     string[] correct = correctAnswers[i]; // Получаем правильные ответы
+                    string[] questionOptions = options[i]; // Получаем варианты ответов
 
                     Console.WriteLine($"\nВопрос {i + 1}: {question}");
+
+                    // Вывод вариантов ответов
+                    Console.WriteLine("Варианты ответов:");
+                    Console.WriteLine(string.Join("\n", questionOptions)); // Вывод вариантов ответов
 
                     // Выводим ответы пользователя и правильные ответы
                     Console.WriteLine("Ваш ответ: " + string.Join(", ", userAnswers));
