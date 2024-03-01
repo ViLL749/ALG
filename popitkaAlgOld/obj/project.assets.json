@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/vill/Desktop/popitkaAlgOld/popitkaAlg.csproj",
+      "projectUniqueName": "/Users/vill/Desktop/Mihalcukv/ALG/popitkaAlgOld/popitkaAlg.csproj",
       "projectName": "popitkaAlg",
-      "projectPath": "/Users/vill/Desktop/popitkaAlgOld/popitkaAlg.csproj",
+      "projectPath": "/Users/vill/Desktop/Mihalcukv/ALG/popitkaAlgOld/popitkaAlg.csproj",
       "packagesPath": "/Users/vill/.nuget/packages/",
-      "outputPath": "/Users/vill/Desktop/popitkaAlgOld/obj/",
+      "outputPath": "/Users/vill/Desktop/Mihalcukv/ALG/popitkaAlgOld/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/vill/.nuget/NuGet/NuGet.Config"

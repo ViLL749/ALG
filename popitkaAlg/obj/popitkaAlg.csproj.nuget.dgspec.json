@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vill/Desktop/C#/popitkaAlg/popitkaAlg.csproj": {}
+    "/Users/vill/Desktop/Mihalcukv/ALG/popitkaAlg/popitkaAlg.csproj": {}
   },
   "projects": {
-    "/Users/vill/Desktop/C#/popitkaAlg/popitkaAlg.csproj": {
+    "/Users/vill/Desktop/Mihalcukv/ALG/popitkaAlg/popitkaAlg.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vill/Desktop/C#/popitkaAlg/popitkaAlg.csproj",
+        "projectUniqueName": "/Users/vill/Desktop/Mihalcukv/ALG/popitkaAlg/popitkaAlg.csproj",
         "projectName": "popitkaAlg",
-        "projectPath": "/Users/vill/Desktop/C#/popitkaAlg/popitkaAlg.csproj",
+        "projectPath": "/Users/vill/Desktop/Mihalcukv/ALG/popitkaAlg/popitkaAlg.csproj",
         "packagesPath": "/Users/vill/.nuget/packages/",
-        "outputPath": "/Users/vill/Desktop/C#/popitkaAlg/obj/",
+        "outputPath": "/Users/vill/Desktop/Mihalcukv/ALG/popitkaAlg/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/vill/.nuget/NuGet/NuGet.Config"
